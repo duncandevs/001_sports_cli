@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328142200) do
+ActiveRecord::Schema.define(version: 20170329210619) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -36,6 +36,42 @@ ActiveRecord::Schema.define(version: 20170328142200) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.text    "first_name"
+    t.text    "last_name"
+    t.integer "number"
+    t.text    "pos"
+    t.integer "total_pts"
+    t.integer "ppg"
+    t.integer "ast"
+    t.integer "apg"
+    t.integer "reb"
+    t.integer "rpg"
+    t.integer "to"
+    t.integer "topg"
+    t.integer "mins"
+    t.integer "mpg"
+    t.integer "fg"
+    t.integer "fg_att"
+    t.integer "fg_pct"
+    t.integer "fg_3pt_att"
+    t.integer "fg_3pt"
+    t.integer "fg_3pt_pg"
+    t.integer "stl"
+    t.integer "spg"
+    t.integer "blk"
+    t.integer "blk_pg"
+    t.integer "pf"
+    t.integer "pf_pg"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "date"
+    t.string "away_team"
+    t.string "home_team"
+    t.string "location"
   end
 
 end
