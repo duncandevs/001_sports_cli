@@ -9,7 +9,6 @@ class Adapters::PlayerStats
 
   def create_player(val)
     #takes schedule data as input returns new schedule object
-
     player = Player.new do |p|
       p.first_name = val["player"]["FirstName"]
       p.last_name = val["player"]["LastName"]
@@ -41,7 +40,7 @@ class Adapters::PlayerStats
   end
 
   def seed_db
-    #takes the data returned by the fetch schedule data function, then runs the create_schedule function then creates the db instances
+    #takes the data returned by the fetch schedule data function, then runs the create_schedule function #then creates the db instances
     players = fetch_player_data["cumulativeplayerstats"]["playerstatsentry"]
     players.each do |val|
        p = create_player(val)
