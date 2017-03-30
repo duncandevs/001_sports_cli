@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329210619) do
+ActiveRecord::Schema.define(version: 20170330174031) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -72,6 +72,29 @@ ActiveRecord::Schema.define(version: 20170329210619) do
     t.string "away_team"
     t.string "home_team"
     t.string "location"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.text    "name"
+    t.text    "city"
+    t.integer "wins"
+    t.integer "losses"
+    t.float   "win_pct"
+    t.integer "league_ranking"
+    t.integer "total_pts"
+    t.float   "ppg"
+    t.float   "fg_pct"
+    t.float   "fg_pct_three_pt"
+    t.integer "reb"
+    t.float   "rpg"
+    t.integer "off_reb"
+    t.float   "orpg"
+    t.integer "ast"
+    t.float   "apg"
+    t.integer "to"
+    t.float   "topg"
+    t.integer "stl"
+    t.float   "spg"
   end
 
 end

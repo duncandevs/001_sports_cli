@@ -55,4 +55,4 @@ class Adapters::PlayerStats
 
 end
 
-Adapters::PlayerStats.new.seed_db
+#Adapters::PlayerStats.new.seed_db
